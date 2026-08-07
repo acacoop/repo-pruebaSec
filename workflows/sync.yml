@@ -1,4 +1,4 @@
-name: Checkmarx Sync
+name: Sync Repository to Checkmarx
 
 on:
   push:
@@ -9,10 +9,7 @@ on:
 
 jobs:
   sync:
-    uses: acacoop/Security-Workflows/workflows/repository-sync.yml@main
-
+    uses: acacoop/Security-Workflows/workflows/repository-sync.yml
     with:
-      target_repo: repo-pruebaSec-destino
-
-    secrets:
-      SYNC_TOKEN: ${{ secrets.SYNC_TOKEN }}
+      target_repo: repo-checkmarx-test
+    secrets: inherit
