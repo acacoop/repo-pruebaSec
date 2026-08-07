@@ -9,7 +9,7 @@ on:
 
 jobs:
   sync:
-    uses: acacoop/Security-Workflows/workflows/repository-sync.yml
+    uses: acacoop/Security-Workflows/.github/workflows/repository-sync.yml
     with:
       target_repo: repo-checkmarx-test
     secrets: inherit
